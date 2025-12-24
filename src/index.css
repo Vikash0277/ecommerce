@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background-color: white;
+  color: black;
+}
+
 @theme {
   --color-primary: #111827;
   --color-brand-red: #ef4444;
