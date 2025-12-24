@@ -1,4 +1,5 @@
 import { Store, Diamond } from "lucide-react";
+import shoppingExperienceImg from "../../assets/shopping_bag_in_hands_1766568528299.png";
 
 export default function BestStores() {
   const stores = [
@@ -40,7 +41,6 @@ export default function BestStores() {
         "https://lh3.googleusercontent.com/aida-public/AB6AXuA-Pt4zG03HzNPHEQ7DcGkiBIl0kkuQIba6wCke2b-967Mwcac058Ckejc_Lv4_knckhTv_J8YDn3IP-BI0CpCaG__OGDmLS9lQi-fYOu4-Fk0qINf7XFS2AraLnZCbCao61HYflWBjYtr_gkz75Cw-NxJJAid6OmgDP7wBZ2gAfnGFwvviI3vliIhNUT12ozOtOVMBHzo2H5NZOhBDDOe-IosBtaPwW8l-YXcxNJnm-oW0tJzB1vQUfOeCE9vICsD-e8pdse50",
         "https://lh3.googleusercontent.com/aida-public/AB6AXuAp-jtofR-F3iK_Sydg1pXX-zxIvi5YY1nQSOOh7fqvSvnKvpJiyo1lzeaNany6BFALG12PPo_TPP0-5TnqAHKOwI02K8qnX3HNALGmpP22ynb5HJgdkhWNiPnC0i0S59824-v-8SuRODLqfB7lLSRImSbiaWDIsAepzFfrZkej0nm-l3TaajjCzCJY_SkFA25B73HfVe9IoNxPMxgchVERYh2pOGRBErfy-9_LXz2LWledt3dxlezO3NepCygRNSJgFwkQXQP3",
         "https://lh3.googleusercontent.com/aida-public/AB6AXuDeFyHwwYxBOpFUGly0NhvsE4DN9gkkgNV5ImNLzoTMX2iQ1nnA59MhAX1GiiEcwqjn4V3piKC8rLmN804ZUUV2yOumzDWU2YmHyUS1a8aQ1OXU6vgrNKyI5h8YD-Yu5Y6CZDQdwQ7RILCoAyIXP3qrGKb6zEQAFvGc0SwKvwcapZ8suSq2GUtr6oyN7Mg6gK5T4O8SxJ91yXNiWQ8-U_VEdPLGipC2v17ic810WFNYuiYgKFf5aZwO448R4IgVhnNMvHBM-Bzm",
-        
       ],
     },
   ];
@@ -51,9 +51,9 @@ export default function BestStores() {
         Best Selling Store
       </h2>
       <div className="flex flex-col lg:flex-row gap-8 items-stretch">
-        <div className="lg:w-1/2 flex items-center justify-center bg-gray-50 dark:bg-gray-800 rounded-3xl overflow-hidden relative group">
+        <div className="lg:w-1/2 h-[400px]  flex items-center justify-center bg-gray-50 dark:bg-gray-800 rounded-3xl overflow-hidden relative group">
           <img
-            src="/src/assets/shopping_bag_in_hands_1766568528299.png"
+            src={shoppingExperienceImg}
             alt="Shopping Experience"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />

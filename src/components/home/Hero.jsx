@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import accecoriesShowcaseImg from "../../assets/accessories_showcase_1766567327766.png";
+import footwearShowcaseImg from "../../assets/footwear_showcase_1766567306963.png";
+import heroTshirtsImg from "../../assets/hero_tshirts_1766560516438.png";
 
 const slides = [
   {
@@ -7,7 +10,7 @@ const slides = [
     title2: "Up to ",
     highlight: "50% OFF!",
     description: "Redefine Your Everyday Style with our premium collection.",
-    image: "/src/assets/hero_tshirts_1766560516438.png",
+    image: heroTshirtsImg,
     bgGradient: "from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-900",
   },
   {
@@ -17,7 +20,7 @@ const slides = [
     highlight: "New Arrivals",
     description:
       "Walk with confidence in our latest designer footwear collection.",
-    image: "/src/assets/footwear_showcase_1766567306963.png",
+    image: footwearShowcaseImg,
     bgGradient:
       "from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20",
   },
@@ -28,7 +31,7 @@ const slides = [
     highlight: "Perfection",
     description:
       "Complete your look with our curated range of premium accessories.",
-    image: "/src/assets/accessories_showcase_1766567327766.png",
+    image: accecoriesShowcaseImg,
     bgGradient:
       "from-amber-50 to-orange-100 dark:from-amber-900/20 dark:to-orange-900/20",
   },
