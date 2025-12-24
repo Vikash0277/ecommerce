@@ -6,38 +6,57 @@ export default function FlashSale() {
     {
       id: 1,
       title: "EliteShield Performance Men's Jackets",
+      subTitle: "Jacket for men",
       price: "Rs.255.000",
       oldPrice: "Rs.625.000",
       sold: 85,
+      total: 100,
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuB2A6NNd01IoE-4luy1YYgy2XYvOahoJDTAAimqoGu8s5GwfP9YrXlzr8OSLj39kozQqFW3hLgCpSbxtDq_5JumRai8hfIcC1TqwPND4pzPiiTZiMcP-IizjG6M_ejujzaqtlTaJWCGeOTbtO6zkXOEqQd_Zdf1n7XkzVjxtTBFHsy-7nY2CguuUsrXKzWr2gThBmxV8CTYKfBPrsHgjMGCDfI-nWhc3V4g3A4wt2GZPDcv-WFg5LHjP-vYcZWTdu3W-WjX98qC",
     },
     {
       id: 2,
       title: "Gentlemen's Summer Gray Hat",
+      subTitle: "Hat for men",
       price: "Rs.99.000",
       oldPrice: "Rs.150.000",
       sold: 60,
+      total: 80,
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuACijQrpxmWmKXd4bE9gDkIkA4hCiJ6i3AE1QM447Eu6KaKNZ2Ql009kz2IhTCRnpgjuCwcNWy5oy5_rQDKbO6Td5zRJXwoVh9E14cn8u4nI5JwSUIx_KoBQOWIv2qQ3X3iV-CeyIWB8PlAj8af56KZ2CvPc1aszLSydNEkqOCjdgHJKmZbWhOVQIb10nSrPR41MXJsCgAuG3sXqMkEds2LH4yzqQ167sRpzK2GjsSz6uagfnqooTNMQdKVtThd2cfCowU7D-gm",
     },
     {
       id: 3,
       title: "OptiZoom Camera Shoulder Bag",
+      subTitle: "Shoulder bag",
       price: "Rs.250.000",
       oldPrice: "Rs.425.000",
       sold: 30,
+      total: 50,
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuC92ehaBS4kq_drmFa9QQMUhW1upSAoQd5AwN3k2rh9WdQzGGSSwGNdAdU_fwxoY0UEAtnomRouK3XqLxuBVTD6yR-6uPkU5W6stLDLRjyw1NTLzzwu5ikPkRMHtPL9pnfDB9kJdDiYqy4hw8FfQ5fSVbn6WPM3k0PuXmBzRDrpDzqaE-7v3zldttTyqaDAmdP78SFjL3eTVn2CVEvnkgJJUT6Y2Ad-Dh9-7S0qDEjUzYklvsLpIfBZBtKUoThb64FESb0fMlLQ",
     },
     {
       id: 4,
       title: "Cloudy Chic - Grey Heels",
+      subTitle: "Heels ",
       price: "Rs.270.000",
       oldPrice: "Rs.580.000",
       sold: 45,
+      total: 60,
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuBNnYhXs-m9who2bKTZg9H0b8XNkyuzjOj1x2ZBBGTOMIHrU-MkvaHeVwq-9GVmi2OBDin2A_9jJEEaItc5E07p1kY-TY0NrCG4wfTrm3cey_gtXeJqifMAdbUNBwTiMylU8XhGceleaEFRBCXFD3acMJ1WtDjNSRHhfkJhECRCh3bw6QOZ0ZAnbFHtqBk2XJMrE3a_08D8YSGbNFYnRRbeRc3u4UDB4h_WCVL9Celj09DD2R04VEWiITwA2yEFeQAfMfJN0249",
+    },
+    {
+      id: 2,
+      title: "Gentlemen's Summer Gray Hat",
+      subTitle: "Hat for men",
+      price: "Rs.99.000",
+      oldPrice: "Rs.150.000",
+      sold: 60,
+      total: 75,
+      image:
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuACijQrpxmWmKXd4bE9gDkIkA4hCiJ6i3AE1QM447Eu6KaKNZ2Ql009kz2IhTCRnpgjuCwcNWy5oy5_rQDKbO6Td5zRJXwoVh9E14cn8u4nI5JwSUIx_KoBQOWIv2qQ3X3iV-CeyIWB8PlAj8af56KZ2CvPc1aszLSydNEkqOCjdgHJKmZbWhOVQIb10nSrPR41MXJsCgAuG3sXqMkEds2LH4yzqQ167sRpzK2GjsSz6uagfnqooTNMQdKVtThd2cfCowU7D-gm",
     },
   ];
 
@@ -58,18 +77,25 @@ export default function FlashSale() {
           </div>
         </div>
         <div className="hidden sm:flex gap-2">
-          <button className="w-8 h-8 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-400">
+          <button className="w-8 h-8 rounded border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-400">
             <ArrowLeft className="w-4 h-4" />
           </button>
-          <button className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center">
+          <button className="w-20 h-8 rounded bg-primary text-white flex items-center justify-center">
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        {flashProducts.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
+      <div className="overflow-x-auto scrollbar-hide pb-4">
+        <div className="flex gap-4 sm:gap-6 w-max">
+          {flashProducts.map((p) => (
+            <div
+              key={p.id}
+              className="w-[172px] sm:w-[220px] lg:w-[230px] flex-shrink-0"
+            >
+              <ProductCard product={p} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

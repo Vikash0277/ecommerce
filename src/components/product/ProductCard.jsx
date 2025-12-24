@@ -18,7 +18,7 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-lg group transition-all">
-      <div className="relative bg-gray-50 dark:bg-gray-800/50 h-48 flex items-center justify-center overflow-hidden">
+      <div className="relative bg-gray-50 dark:bg-gray-800/50 h-56 flex items-center justify-center overflow-hidden">
         <img
           src={product.image}
           className="max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
@@ -37,20 +37,51 @@ export default function ProductCard({ product }) {
       </div>
 
       <div className="p-4">
-        <h3 className="text-sm font-semibold truncate text-gray-800 dark:text-white">
+        <h3 className="text-sm font-semibold truncate text-gray-900 dark:text-white">
           {product.title}
         </h3>
+        {product.subTitle && (
+          <p className="text-[11px] text-gray-500 dark:text-gray-400 truncate mt-0.5">
+            {product.subTitle}
+          </p>
+        )}
 
-        <div className="flex items-center gap-2 mt-1.5">
-          <span className="font-bold text-gray-900 dark:text-white">
-            {product.price}
-          </span>
-          {product.oldPrice && (
-            <span className="text-xs text-gray-400 line-through">
-              {product.oldPrice}
+        <div className="flex items-center justify-between gap-2 mt-2">
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-gray-900 dark:text-white">
+              {product.price}
+            </span>
+            {product.oldPrice && (
+              <span className="text-xs text-gray-400 line-through">
+                {product.oldPrice}
+              </span>
+            )}
+          </div>
+          {typeof product.sold !== "number" && product.sold && (
+            <span className="text-[10px] text-gray-400 italic">
+              {product.sold} Sold
             </span>
           )}
         </div>
+
+        {typeof product.sold === "number" && (
+          <div className="mt-4 flex items-center gap-3">
+            <div className="flex-1 bg-gray-100 dark:bg-gray-800 h-1.5 rounded-full overflow-hidden border border-gray-100 dark:border-gray-800">
+              <div
+                className="bg-primary h-full rounded-full transition-all duration-700 ease-out"
+                style={{
+                  width: `${Math.min(
+                    (product.sold / (product.total || 100)) * 100,
+                    100
+                  )}%`,
+                }}
+              />
+            </div>
+            <span className="text-[10px] font-bold text-gray-900 dark:text-white whitespace-nowrap uppercase">
+              {product.sold}/{product.total || 100} SALE
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
