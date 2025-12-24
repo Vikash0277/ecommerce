@@ -62,7 +62,7 @@ export default function FlashSale() {
 
   return (
     <section className="mb-8 sm:mb-12">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+      <div className="flex flex-row justify-between items-center mb-6 gap-4">
         <div className="flex flex-wrap items-center gap-3 sm:gap-4 font-bold">
           <h2 className="text-xl sm:text-2xl flex items-center gap-2 text-gray-900 dark:text-white uppercase tracking-tight">
             <Zap className="w-6 h-6 text-yellow-500 fill-yellow-500" />

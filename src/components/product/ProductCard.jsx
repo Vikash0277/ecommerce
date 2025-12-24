@@ -21,7 +21,7 @@ export default function ProductCard({ product }) {
       <div className="relative bg-gray-50 dark:bg-gray-800/50 h-56 flex items-center justify-center overflow-hidden">
         <img
           src={product.image}
-          className="max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
 
         <button

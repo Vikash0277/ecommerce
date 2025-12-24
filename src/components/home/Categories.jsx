@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   Shirt,
   Watch,
   ShoppingBag,
@@ -42,11 +43,19 @@ const categories = [
 export default function Categories() {
   return (
     <section className="mb-8 sm:mb-12">
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-9 gap-3 sm:gap-4 text-center">
+      <div className="flex justify-between items-center mb-4 px-1 sm:px-0">
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+          Categories
+        </h2>
+        <button className="sm:hidden w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300">
+          <ArrowRight className="w-4 h-4" />
+        </button>
+      </div>
+      <div className="flex sm:grid sm:grid-cols-4 md:grid-cols-9 gap-3 sm:gap-4 text-center overflow-x-auto scrollbar-hide pb-2 sm:pb-0">
         {categories.map((cat) => (
           <a
             key={cat.name}
-            className="group flex flex-col items-center gap-2 p-1 sm:p-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-colors"
+            className="group flex flex-col items-center gap-2 p-1 sm:p-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-colors flex-shrink-0 w-20 sm:w-auto"
             href="#"
           >
             <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center group-hover:bg-white group-hover:shadow-md transition-all dark:group-hover:bg-gray-600 border border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-500 overflow-hidden">

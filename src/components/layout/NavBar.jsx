@@ -73,6 +73,27 @@ export default function NavBar() {
             </button>
           </div>
         </div>
+
+        
+        <div className="sm:hidden pb-4">
+          <div className="relative flex items-center border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 hover:border-primary transition-colors focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+            <div className="relative">
+              <select className="h-10 border-0 border-r border-gray-300 dark:border-gray-700 bg-transparent py-0 pl-3 pr-7 text-xs font-medium text-gray-600 dark:text-gray-300 focus:ring-0">
+                <option>All</option>
+                <option>Fashion</option>
+                <option>Electronics</option>
+              </select>
+            </div>
+            <input
+              className="block w-full border-0 py-2 pl-3 bg-transparent text-gray-900 dark:text-white placeholder:text-gray-400 focus:ring-0 text-sm"
+              placeholder="Search product..."
+              type="text"
+            />
+            <button className="px-3 text-gray-400 hover:text-primary dark:hover:text-white">
+              <Search className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
   );
