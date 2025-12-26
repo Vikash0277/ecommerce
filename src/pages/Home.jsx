@@ -7,7 +7,7 @@ import FinalBanner from "../components/home/FinalBanner";
 
 export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto px-4 pt-4 space-y-12">
+    <main className="max-w-7xl mx-auto px-2 xs:px-4 pt-4 space-y-12">
       <Hero />
       <Categories />
       <FlashSale />

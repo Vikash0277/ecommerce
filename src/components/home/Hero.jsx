@@ -55,7 +55,7 @@ export default function Hero() {
         ></div>
       </div>
 
-      <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6 sm:px-12 py-10 transition-all duration-700">
+      <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-12 py-10 transition-all duration-700">
         <div className="space-y-4 sm:space-y-6 text-center md:text-left transition-all duration-700 transform">
           <span className="inline-block px-3 py-1 bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400 rounded-full text-xs sm:text-sm font-semibold tracking-wide animate-pulse">
             {slides[currentSlide].tag}
